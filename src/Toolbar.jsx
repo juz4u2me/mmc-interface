@@ -82,6 +82,7 @@ export default class Toolbar extends Component {
         }
 
         document.getElementById("N").value = Obtained['N'].toFixed(2);
+        document.getElementById("Nq").value = Obtained['Nq'].toFixed(2);
         document.getElementById("T").value = Obtained['T'].toFixed(2);
         document.getElementById("W").value = Obtained['W'].toFixed(2);
     }
@@ -115,6 +116,11 @@ export default class Toolbar extends Component {
                     <Button variant="contained" color="primary" onClick={this.mmc}>Simulate</Button>
                 </ButtonGroup><br></br>
                 <TextField id="N" label="Expected no. of users" type="number"
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        variant="outlined" /><br></br>
+                <TextField id="Nq" label="Expected no. of users in queue" type="number"
                         InputLabelProps={{
                             shrink: true,
                         }}
